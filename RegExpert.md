@@ -5,6 +5,7 @@ The challenges were presented in the command line and we used `cat filename | nc
 tester. The difficulty was primarily in using Ruby's limited regex class. While PCRE []() has many features designed to make complex 
 matching possible, Ruby does not. Additionally, each regex had to be as short as possible, which required siginificant refactoring.
 
+
 ### Problem 1
 This challenge required us to match a SQL SELECT statement, case insensitively, with letters between each character of the statment. To
 do this, we used this regex:
@@ -13,6 +14,7 @@ do this, we used this regex:
 ```
 The `(?i)` denotes case insensitivity, so `s` represents both lower and upper case. In between each character are `.*` which means any 
 character, repeated 0 or more times. These accounted for any text in between the characters of the command. 
+
 
 ### Problem 2
 This challenge was to match any number of 'a's followed by the same number of 'b's. The flavor text noted that this is a classic case of 
@@ -37,6 +39,7 @@ Since the previous match for group 1 was `aabb`, the regex will substitute that 
 the regex will go back to the previous confirmed match (`aabb'). Now, since the regex was surrounded by `^$`, the regex will not match
 since there is an extra character between `aabb` and the end of the line.
 
+
 ### Problem 3
 We were asked to match `x^n^2`, where `n` is a positive integer. So sample matches would be 1, 4, 9, 16:
 ```
@@ -50,10 +53,12 @@ xxxxxxxxxxxxxxxx
 ^(?!(..+)\1+$|.?$)xx
 ```
 
+
 ### Problem 4
 ```ruby
 ((\w)(\g<1>)\2|\w?)$
 ```
+
 
 ### Problem 5
 ```ruby
