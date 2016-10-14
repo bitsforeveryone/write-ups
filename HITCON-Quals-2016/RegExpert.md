@@ -27,11 +27,11 @@ Since the previous match for group 1 was `aabb`, the regex will substitute that 
 
 
 ### Problem 3
-We were asked to match prime length strings of x's, not including 0 or 1. Sample matches would be 3, 5, 9, 11:
+We were asked to match prime length strings of x's, not including 0 or 1. Sample matches would be 3, 5, 7, 11:
 ```
 xxx
 xxxxx
-xxxxxxxxx
+xxxxxxx
 xxxxxxxxxxx
 ```
 The challenge is that prime numbers are prime; they have no factors and cannot be defined by a uniform set of rules. We once again searched for a PCRE regex that did this and implemented it in Ruby. We defined a negative matching group `(?! )` that matches any string that is the length of two prime numbers added together. More succinctly, `(?!(..+)\1+$|.?$)` matches and excludes any non-prime number. The `(..+)` group matches any two or greater character string. The `.` could be replaced by x's, but is not required. Then, `\1+` matches the first group, repeated any number of times. The result is a compound number. `|.?$` matches a 0 or 1 characters at the end of the string and since we included `^` at the beginning of the regex, matches an empty line or a line containing only one character. Finally, `xx` matches the first two x's in a string that is not matches by our non-prime-number-matching group. Thus, our final regex looks like this:
