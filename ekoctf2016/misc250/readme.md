@@ -4,11 +4,12 @@ Description: These QR codes look weird
 
 by Madeye
 
-Files: [Zip File] ()
+Files: [Zip File] (misc250_100ff979353dd452.zip)
 
 When extracted, the zip file contains 14 PNG files that are images of IBM-29 punch cards. The images are consistently the same size and with equally spaced punches. Iterating over each column then each row, you can read the punch if the pixel in the top left corner is white. The top row, left most column starts at pixel column 15 and pixel row 20. Each punch location is then spaced 20 pixel vertically and 7 pixels horizontally.
 
 Using PIL, I was able to read each image to find the punches on each row. The following code returns a list of columns of punches, where each column is a list of the rows that are punched.
+
 ```python
 def convert(imgfile):
     image = Image.open(imgfile)
