@@ -79,7 +79,7 @@ ONCE UPON A TEME, THERE WAS A YOUNG HACKER CALLED MJ          [1]
 Following along with the story, it talks about mistakes. There are also some mistakes in the story. After double checking that the solver was correct, I noticed the first three typos were E, K, O which matches the flag pattern. In order, the flag properly describes the system that used the punchcards. *note: some writeups show the flag using the parenthesis, but since there was no symbol for curly braces I submited the flag with the curlies and got the points*
 
 ```
-EKO{MAINFRAME}
+EKO{M41NFR4M3}
 ```
 
 Entire solve script can be found [here] (solver.py)
