@@ -28,7 +28,7 @@ WOW! A free leak already. So, I decided to drop the binary into IDA and see what
 After some analysis, I saw that the binary started off and malloc'ed a space for Donald Trumps tax return and put the flag as the password. Awesome, goal: find the password to his tax return.
 
 ### Vulnerability
-The vulnerability comes into play if you try to edit your tax return. After editing the tax return, it asks you to confirm, prompting you for [y/n], which is read in by none other than `gets`. Turns out the pointer given above was a pointer to the spot on the stack that holds the malloc'ed address of Trumps Tax return. Using the gets stack control, I used printf to leak that address with my first edit, and then memcpy to move the password to the name field with the second edit.
+The vulnerability comes into play if you try to edit your tax return. After editing the tax return, it asks you to confirm, prompting you for `[y/n]`, which is read in by none other than `gets(char* )`. Turns out the pointer given above was a pointer to the spot on the stack that holds the malloc'ed address of Trumps Tax return. Using the gets stack control, I used printf to leak that address with my first edit, and then memcpy to move the password to the name field with the second edit.
 
 ```python
 from pwn import *
