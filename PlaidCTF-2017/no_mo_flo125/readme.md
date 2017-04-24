@@ -10,7 +10,7 @@ Running the binary we see it immediately expects user input. Anything less than 
 
 Jumping into IDA we see in main() that there is in fact a 32 character read followed by a 16 iteration loop. The loop creates two arrays, one containing the even characters and the other containing the odd characters. 
 
-After the arrays are made, a user defined signal is created that jumps to a switch statement. Then the odd array is then passed to a function that presumably checks the characters and returns either a 0 or 1. Looking further down we see that we want the function to return a 1 to pass the first check. Finally, the even array is then passed to a different checking function which we also want to return a 1. 
+After the arrays are made, a user defined signal is created that jumps to a switch statement. Then the odd array is  passed to a function that presumably checks the characters and returns either a 0 or 1. Looking further down we see that we want the function to return a 1 to pass the first check. Finally, the even array is then passed to a different checking function which we also want to return a 1. 
 
 ![no_flo main()](https://github.com/r0d/Write_Ups/blob/master/PlaidCTF-2017/no_mo_flo-125pts/no_flo_main.png)
 
