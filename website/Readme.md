@@ -27,6 +27,17 @@ nothing magic about this file could also have been created manually *. The
 command just ensures that it has all the necessary metadata and provides a
 consistent template.
 
+### Publish to Website
+
+`./deploy.sh`
+
+This will run the following steps.
+
+1. Build the site (`hugo`)
+2. Commit the new version to the `public` repository (git submodule)
+3. Push the new version to Github (bitsforeveryone.github.io)
+
+Then optionally you should commit in this repository to update the submodule.
 
 ## Organization
 
@@ -106,6 +117,12 @@ ensure the nested directories work correctly.
 [bh]:https://github.com/halogenica/beautifulhugo
 
 ## Gotchas
+
+### Blank Response
+
+**Behavior:** When you run `hugo server` and visit the page it is completely
+blank. This most likely means you do not have the theme. See
+[submodules][#submodules] for how to fix this. Then restart the server.
 
 ### Submodules
 This repository has git submodules for the theme and in order to publish the
