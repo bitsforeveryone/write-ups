@@ -2,6 +2,9 @@
 title: "CSAW 2017"
 date: 2017-09-19T14:14:20-04:00
 type: ctf
+menu:
+  main:
+    parent: 'writeups'
 ---
 
 BitsForEveryone competed in CSAW CTF during September 2017. This year, we

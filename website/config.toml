@@ -22,23 +22,16 @@ paginate = 5
   github = "bitsforeveryone"
 
 [[menu.main]]
-    identifier = "w"
+    identifier = "writeups"
     name = "Writeups"
     url = "writeup/"
     weight = 1
 
 [[menu.main]]
-    parent = "w"
+    parent = "writeups"
     name = "all"
-    url = "writeup/"
+    url = "page/all"
     weight = 1
-
-# Add competitions to the top menu like so
-[[menu.main]]
-    parent = "w"
-    name = "CSAW 2017"
-    url = "writeup/csaw_2017/"
-    weight = 2
 
 [[menu.main]]
     name   = "Projects"
