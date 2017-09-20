@@ -1,4 +1,4 @@
-baseurl = "https://bitsforeveryone.github.io"
+baseurl = "http://www.bitsforeveryone.com/"
 DefaultContentLanguage = "en"
 title = "BitsForEveryone"
 theme = "beautifulhugo"
