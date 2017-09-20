@@ -1,7 +1,6 @@
 ---
 title: "tableEZ"
 date: 2017-09-19T14:14:20-04:00
-draft: true
 type: "writeup"
 tags:
   - "csaw 2017"
