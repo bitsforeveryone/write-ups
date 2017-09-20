@@ -1,3 +1,57 @@
-baseURL = "http://example.org/"
-languageCode = "en-us"
-title = "My New Hugo Site"
+baseurl = "https://username.github.io"
+DefaultContentLanguage = "en"
+title = "BitsForEveryone"
+theme = "beautifulhugo"
+metaDataFormat = "yaml"
+pygmentsUseClasses = true
+pygmentCodeFences = true
+paginate = 5
+
+[Params]
+  subtitle = "ctf writeups and projects"
+  logo = "img/bfe.png"
+  favicon = "img/favicon.ico"
+  dateFormat = "2 January, 2006"
+  commit = false
+  rss = true
+  comments = true
+
+[Author]
+  name = "bfe"
+  website = "bitsforeveryone.com"
+  github = "bitsforeveryone"
+
+[[menu.main]]
+    identifier = "w"
+    name = "Writeups"
+    url = "writeup/"
+    weight = 1
+
+[[menu.main]]
+    parent = "w"
+    name = "all"
+    url = "writeup/"
+    weight = 1
+
+# Add competitions to the top menu like so
+[[menu.main]]
+    parent = "w"
+    name = "CSAW 2017"
+    url = "writeup/csaw_2017/"
+    weight = 2
+
+[[menu.main]]
+    name   = "Projects"
+    url    = "project/"
+    weight = 2
+
+[[menu.main]]
+    name = "Tags"
+    url = "tags"
+    weight = 3
+
+[[menu.main]]
+    name = "About"
+    url = "page/about/"
+    weight = 4
+
