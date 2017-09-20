@@ -2,7 +2,6 @@
 title: "no_mo_flo"
 date: 2017-04-23T09:36:27-04:00
 type: "writeup"
-draft: true
 tags:
   - plaid 2017
   - reverse engineering
