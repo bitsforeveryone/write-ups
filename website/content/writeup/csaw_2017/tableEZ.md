@@ -11,7 +11,7 @@ tags:
 #### CSAW CTF 2017 - 100 points - Reverse Engineering 
 <!--more-->
 **Description - Bobby was talking about tables a bunch, so I made some table stuff. I think this is what he was talking about...**  
-**Files: [tablez](https://github.com/r0d/Write_Ups/blob/master/CSAW%20CTF%202017/tablEZ/tablez)**
+**Files: [tablez](https://github.com/r0d/Write_Ups/raw/master/CSAW%20CTF%202017/tablEZ/tablez)**
 
 *Solved by r0d & stonepresto* 
 
@@ -19,19 +19,19 @@ tags:
 
 tablEZ is a fairly straight-forward crackme style challenge.  
 
-![tablez main()](https://github.com/r0d/Write_Ups/blob/master/CSAW%20CTF%202017/tablEZ/maincheckloop.png)
+![tablez main()](https://github.com/r0d/Write_Ups/raw/master/CSAW%20CTF%202017/tablEZ/maincheckloop.png)
 
 
 Booting up IDA, we see a prompt asking for the flag and an fgets whcih recieves the flag. The length of the input is then stored and we enter a loop that iterates through our input string byte by byte and calls get_tbl_entry on each byte. It then overwrites the byte it passed to get_tbl_entry with the return value. So it seems like this function is taking our input and translating it with this function. Looking a little farther, we see that our translated input is compared to a hex string that was passed earlier in the function ([rbp + s2]). So, the key here is to figure out how get_tbl_entry is modifying our input and work backwards from the hex string to recover our flag.   
 
 get_tbl_entry turns out to be a fairly small function. We see a loop, and looking at the comparison we see it will execute at most 256 time while looking for a match to our input in the data section at trans_table. Once a match is found, it uses that index to pull out a new value and returns the new value.   
 
-![tabelz get_tbl_entry()](https://github.com/r0d/Write_Ups/blob/master/CSAW%20CTF%202017/tablEZ/gettblentry.png)
+![tabelz get_tbl_entry()](https://github.com/r0d/Write_Ups/raw/master/CSAW%20CTF%202017/tablEZ/gettblentry.png)
 
 
 Looking at trans_table, we see a large array starting with \x01 to and ending at \xFF and a corresponding (random) value associated with each entry. So I think it's safe to assume here that this function is simply taking our input, looking it up in this table, and translating it to a random hex value. Since we already have the hex values it is being compared too, we can simply look those up and find the corresponding plaintext that produces them, which will yield the flag.  
   
-![tabelz Data:trans_table](https://github.com/r0d/Write_Ups/blob/master/CSAW%20CTF%202017/tablEZ/transtable.png)
+![tabelz Data:trans_table](https://github.com/r0d/Write_Ups/raw/master/CSAW%20CTF%202017/tablEZ/transtable.png)
 
 In our case, we wrote an IDApython script to perform a reverse lookup, which resulted in the flag.   
 
