@@ -1,0 +1,57 @@
+{{ define "header" }}
+  <header class="header-section ">
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="page-heading">
+              <h1>{{ if .Data.Singular }}#{{ end }}{{ .Title }}</h1>
+              <hr class="small">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+{{ end }}
+{{ define "main" }}
+  <div class="container" role="main">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        {{ with .Content }}
+          <div class="well">
+            {{.}}
+          </div>
+        {{ end }}
+        <div class="posts-list">
+          {{ range (where .Site.Pages "Type" "writeup")}}
+            <article class="post-preview">
+              <a href="{{ .Permalink }}">
+                <h2 class="post-title">{{ .Title }}</h2>
+
+                {{ if .Params.subtitle }}
+                  <h3 class="post-subtitle">
+                    {{ .Params.subtitle }}
+                  </h3>
+                {{ end }}
+              </a>
+
+              <p class="post-meta">
+                {{ default (i18n "dateFormat") .Site.Params.dateformat | .Date.Format | i18n "postedOnDate" }}
+              </p>
+              {{ if .Params.tags }}
+                <span class="post-meta">
+                  {{ range .Params.tags }}
+                    #<a href="{{ $.Site.LanguagePrefix | absURL }}tags/{{ . | urlize }}/">{{ . }}</a>&nbsp;
+                  {{ end }}
+                </span>
+              {{ end }}
+
+            </article>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+{{ end }}
+

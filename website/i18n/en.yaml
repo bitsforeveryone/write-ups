@@ -1,0 +1,4 @@
+
+# Footer
+- id: poweredBy # Accepts HTML
+  translation: 'Built with <a href="http://gohugo.io">Hugo</a>&nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>&nbsp;&bull;&nbsp; Adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>'
