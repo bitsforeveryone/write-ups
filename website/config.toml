@@ -1,4 +1,4 @@
-baseurl = "http://www.bitsforeveryone.com/"
+baseurl = "https://www.bitsforeveryone.com/"
 DefaultContentLanguage = "en"
 title = "BitsForEveryone"
 theme = "beautifulhugo"
@@ -18,7 +18,7 @@ paginate = 5
 
 [Author]
   name = "bfe"
-  website = "bitsforeveryone.com"
+  website = "https://www.bitsforeveryone.com"
   github = "bitsforeveryone"
 
 [[menu.main]]
