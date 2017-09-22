@@ -33,11 +33,16 @@ preview how the entire site will look once published with hugo.
 
 #### Setup
 1. [Install Hugo](https://gohugo.io/getting-started/installing/#quick-install)
-2. Ensure you have the git [submodules](#submodules)
-3. `hugo server --buildDrafts`
+2. `hugo server --buildDrafts`
 
 Now you have a development copy of the website at <http://localhost:1313/>. As
 you edit content it will automatically be updated.
+
+If you plan to [deploy](#publish-to-website) the website you should also (note
+it is not required, anyone else can deploy the website once your content is
+committed to the repository).
+
+- Ensure you have the git [submodules](#submodules)
 
 #### Create a Writeup
 
@@ -156,25 +161,20 @@ updated, committed, and pushed with the `deploy.sh` [script](#publish-to-website
 files and images can be committed in a higher level directory. See the [images
 section](#images) for more in
 
-[`themes`](./themes) contains the [Beautiful Hugo][bh] as a git submodule.  This
-is what determines the look and feel of the website. Portions of this can be
-overridden in folders like `archetypes`, and `layouts` to customize the site.
-The theme can be easily changed but might require some additional work to
-ensure the nested directories work correctly.
+[`themes`](./themes) contains the [Beautiful Hugo][bh].  This is what determines
+the look and feel of the website. Portions of this can be overridden in folders
+like `archetypes`, and `layouts` to customize the site.  The theme can be easily
+changed but might require some additional work to ensure the nested directories
+work correctly.
 
 [bh]:https://github.com/halogenica/beautifulhugo
 
 ## Gotchas and Tips
 
-#### Blank Response
-
-**Behavior:** When you run `hugo server` and visit the page it is completely
-blank. This most likely means you do not have the theme. See
-[submodules](#submodules) for how to fix this. Then restart the server.
-
 #### Submodules
-This repository has git submodules for the theme and in order to publish the
-site. Here is how to get setup:
+
+This repository has git submodules  in order to publish the site. Here is how to
+get setup:
 
 - If you have not yet checked out the repository:
   - `git clone --recursive git@github.com:bitsforeveryone/write-ups.git`
@@ -182,6 +182,10 @@ site. Here is how to get setup:
 - If you already have the repository:
   - `git submodule init`
   - `git submodule update --recursive`
+
+**Change: we used to use submodules for the theme as well, but that has since
+been removed due to unessecary complexity. Now we vendor the source code of the
+theme directly**
 
 #### Templates
 
