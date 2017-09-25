@@ -8,4 +8,4 @@ BitsForEveryone competed in EKO Party CTF 2016 during October and placed 35th ov
 
 Write Ups:
 
-Misc 250: [Old But Gold - Punch Card Challenge]  (./misc250/)
+Misc 250: [Old But Gold - Punch Card Challenge](./misc250/)
