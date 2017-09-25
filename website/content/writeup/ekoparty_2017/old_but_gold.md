@@ -9,7 +9,7 @@ tags: []
 #### CTF - 250 points - Misc
 <!--more-->
 **Description - These QR codes look weird**  
-**Files: [Zip Files](https://github.com/bitsforeveryone/write-ups/blob/master/EKOPartyCTF_2016/misc250/misc250_100ff979353dd452.zip)**
+**Files: [Zip Files](https://github.com/bitsforeveryone/write-ups/raw/master/EKOPartyCTF_2016/misc250/misc250_100ff979353dd452.zip)**
 
 
 *Solved by madeye*
