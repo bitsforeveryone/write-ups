@@ -4,7 +4,7 @@ Description: These QR codes look weird
 
 by Madeye
 
-Files: [Zip File] (misc250_100ff979353dd452.zip)
+Files: [Zip File](misc250_100ff979353dd452.zip)
 
 When extracted, the zip file contains 14 PNG files that are images of IBM-29 punch cards. The images are consistently the same size and with equally spaced punches. Iterating over each column then each row, you can read the punch if the pixel in the top left corner is white. The top row, left most column starts at pixel column 15 and pixel row 20. Each punch location is then spaced 20 pixel vertically and 7 pixels horizontally.
 
@@ -82,4 +82,4 @@ Following along with the story, it talks about mistakes. There are also some mis
 EKO{M41NFR4M3}
 ```
 
-Entire solve script can be found [here] (solver.py)
+Entire solve script can be found [here](solver.py)
