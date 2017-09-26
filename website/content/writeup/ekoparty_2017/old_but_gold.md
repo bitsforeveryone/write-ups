@@ -2,7 +2,6 @@
 title: "Old_but_gold"
 date: 2017-09-25T17:11:41-04:00
 type: "writeup"
-draft: true
 tags: []
 ---
 
