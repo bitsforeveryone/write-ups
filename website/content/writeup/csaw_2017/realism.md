@@ -7,13 +7,15 @@ tags:
   - "reverse engineering"
 ---
 
-#### CTF - XXX points - CATEGORY
+#### CSAW CTF 2017 - 300 points - Reverse Engineering 
+
 <!--more-->
 
 **Description - Did you know that x86 is really old? I found a really old Master Boot Record that I thought was quite interesting! At least, I think it's really old...**
+
 **qemu-system-i386 -drive format=raw,file=main.bin**
 
-**Files: [main.bin](https://github.com/rebecacalazans/CTFs/blob/master/CSAW_CTF_2017/realism/main.bin)**
+**Files: [main.bin](https://github.com/bitsforeveryone/write-ups/raw/master/CSAW_CTF_2017/realism/main.bin)**
 
 *Solved by Rebeca, r0d, l0ckbox, vimgod*
 
@@ -26,7 +28,7 @@ We used IDA to disassemble the program.
 
 The most important part of assembly code is:
 
-![main_loop()](https://github.com/rebecacalazans/CTFs/blob/master/CSAW_CTF_2017/realism/mainloop.png)
+![main_loop()](https://github.com/bitsforeveryone/write-ups/raw/master/CSAW_CTF_2017/realism/mainloop.png)
 
 On this part of the code the flag is analyzed.
 
@@ -38,7 +40,7 @@ After removing the first string, the remaining part of the input is moved to the
 
 Next, in 8 iterations we have the input recursively execute each operation:
 
-——————————————————————————————————————————
+------------------
 
 1.	and with memory in address (si + 7D90h)
 
@@ -50,11 +52,11 @@ Next, in 8 iterations we have the input recursively execute each operation:
 		The operation just erase the flag in one of the positions
 
 
-[see memory](https://github.com/rebecacalazans/CTFs/blob/master/CSAW_CTF_2017/realism/hexdump.png)
+[see memory](https://github.com/bitsforeveryone/write-ups/raw/master/CSAW_CTF_2017/realism/hexdump.png)
 
 2. psadw with the string in xmm5 (see that the result of operation is storage at xmm5, so, that register is changed all operation)
 
-*[see psadbw function](http://x86.renejeschke.de/html/file_module_x86_id_253.html)*
+[see psadbw function](http://x86.renejeschke.de/html/file_module_x86_id_253.html)
 
 ------------------
 
@@ -101,7 +103,7 @@ After that, we have:
 
 ------------------
 
-![mathematica()](https://github.com/rebecacalazans/CTFs/blob/master/CSAW_CTF_2017/realism/mathematica.png)
+![mathematica()](https://github.com/bitsforeveryone/write-ups/raw/master/CSAW_CTF_2017/realism/mathematica.png)
 
 ------------------
 
