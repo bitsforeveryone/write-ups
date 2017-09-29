@@ -10,7 +10,7 @@ hugo
 cd public
 # ensure we are at head
 git checkout master
-git pull
+git pull origin master
 # add changes
 git add .
 
