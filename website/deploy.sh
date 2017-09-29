@@ -8,6 +8,10 @@ hugo
 
 # Go To Public folder and add changes to git
 cd public
+# ensure we are at head
+git checkout master
+git pull
+# add changes
 git add .
 
 # Commit changes.
