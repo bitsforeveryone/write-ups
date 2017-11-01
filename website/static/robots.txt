@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /poster/
+
+User-agent: r2d2
+Disallow: /ds-1_orbital_battle_station
+
+User-agent: c3po
+Disallow: /moisture_vapors

@@ -1,5 +1,5 @@
 ---
-title: "Writeups"
+title: "Flags"
 date: 2017-09-19T14:14:20-04:00
 type: meta
 ---

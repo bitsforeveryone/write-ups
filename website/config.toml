@@ -48,3 +48,7 @@ paginate = 5
     url = "page/about/"
     weight = 4
 
+[taxonomies]
+    writeups = ""
+
+
