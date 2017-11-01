@@ -1,7 +1,7 @@
 ---
 title: "Flag Level Zero"
 date: 1970-01-01T03:13:37-13:37
-layout:
+layout: single
 ---
 
 ## What are you doing?
@@ -15,5 +15,6 @@ followed directions.
 
 Here is your consolation prize!
 
-![prize](http://seminarygal.com/wp-content/uploads/2013/01/goat-zonk1-200x200.png)
+![prize](https://cdn-s3.si.com/s3fs-public/si/dam/assets/13/11/14/131114130100-navy-mascot-bill-the-goat-single-image-cut.jpg)
 
+Ha!

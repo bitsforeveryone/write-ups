@@ -1,7 +1,7 @@
 ---
 title: "Flag Level Three"
 date: 1970-01-01T03:13:37-13:37
-layout:
+layout: single
 ---
 
 ## Welcome
