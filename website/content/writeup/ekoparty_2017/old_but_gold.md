@@ -1,11 +1,11 @@
 ---
 title: "Old_but_gold"
-date: 2017-09-25T17:11:41-04:00
+date: 2016-10-30T17:11:41-04:00
 type: "writeup"
-tags: []
+tags: [misc, ekoparty, legacy]
 ---
 
-#### CTF - 250 points - Misc
+#### EKOParty 2016 CTF - 250 points - Misc
 <!--more-->
 **Description - These QR codes look weird**  
 **Files: [Zip Files](https://github.com/bitsforeveryone/write-ups/raw/master/EKOPartyCTF_2016/misc250/misc250_100ff979353dd452.zip)**

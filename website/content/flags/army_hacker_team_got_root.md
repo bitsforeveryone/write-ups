@@ -8,7 +8,7 @@ layout: single
 
 Thanks for your interest in the USMA Cadet Competitive Cyber Team
 
-## Flag Four army_hacker_team_got_root: 
+## Flag Four: army_hacker_team_got_root: 
 
 Wow, you found the final flag. *Well done*. In cybersecurity competitions called capture-the-flag, aspring or full
 fledge hackers attempt to recover strings of characters called _flags_. These flags represent critical data that
@@ -17,7 +17,7 @@ or even the full schematics of a DS-1 Orbital Battle Station.
 
 Here is your prize!
 
-![prize](http://www.allaboutlives.com/wp-content/uploads/2017/05/o-GIFT-IN-HAND-facebook.jpg)
+![prize](http://images4.fanpop.com/image/photos/22200000/Gifts-gifts-22226532-2048-1536.jpg)
 
 Claim your prize
 

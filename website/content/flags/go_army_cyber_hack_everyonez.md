@@ -21,5 +21,5 @@ Here is your prize!
 
 Claim your prize
 
-Send an email to `hacker@wclaymoody.com` to get the recognition you deserve. Set the subject to:
-`2aa74e051d8388d02b73bce393ea1a6b`
+Send an email to `hacker@wclaymoody.com` to get the recognition you deserve.
+Use subject `2aa74e051d8388d02b73bce393ea1a6b`

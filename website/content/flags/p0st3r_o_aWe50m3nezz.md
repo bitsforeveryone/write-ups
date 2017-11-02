@@ -17,12 +17,12 @@ or even the full schematics of a DS-1 Orbital Battle Station.
 
 Here is your prize!
 
-![prize](http://www.allaboutlives.com/wp-content/uploads/2017/05/o-GIFT-IN-HAND-facebook.jpg)
+![prize](https://c1.staticflickr.com/8/7010/6510934443_8bd2942b79_b.jpg)
 
 ### Claim your prize
 
 Send an email to `hacker@wclaymoody.com` to get the recognition you deserve.
-use subject `6293eaa8ac17df573116b20b627d39af`
+Use subject `6293eaa8ac17df573116b20b627d39af`
 
 
 
