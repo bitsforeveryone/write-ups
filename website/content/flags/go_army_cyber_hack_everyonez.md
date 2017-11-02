@@ -19,7 +19,7 @@ Here is your prize!
 
 ![prize](http://www.allaboutlives.com/wp-content/uploads/2017/05/o-GIFT-IN-HAND-facebook.jpg)
 
-Claim your prize
+### Claim your prize
 
 Send an email to `hacker@wclaymoody.com` to get the recognition you deserve.
 Use subject `2aa74e051d8388d02b73bce393ea1a6b`

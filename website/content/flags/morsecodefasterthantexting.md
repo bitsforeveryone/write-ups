@@ -19,7 +19,7 @@ Here is your prize!
 
 ![prize](https://www.kiplinger.com/slideshow/credit/T065-S001-15-gifts-that-keep-on-giving/images/intro.jpg)
 
-Claim your prize
+### Claim your prize
 
 Send an email to `hacker@wclaymoody.com` to get the recognition you deserve.
 Use subject `64ce35e665aa7c407886dbfa5647d6ce`
