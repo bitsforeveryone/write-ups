@@ -9,11 +9,7 @@ echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 echo "Update submodule"
 cd public
 # ensure we are at head
-git checkout -- ./*
-git clean -f -d
-git clean -f -x
-git checkout master
-git pull origin master
+git reset --hard origin/master
 
 # Build the project.
 cd ..
