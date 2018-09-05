@@ -1,4 +1,0 @@
-[submodule "website/public"]
-	path = website/public
-	url = git@github.com:bitsforeveryone/bitsforeveryone.github.io.git
-    branch = master
