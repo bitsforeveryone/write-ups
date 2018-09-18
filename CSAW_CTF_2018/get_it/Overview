@@ -1,0 +1,3 @@
+This was the second basic pwn challenge, worth 50 points.
+We have to use the get() function to overwrite the return address and change it to give_shell
+Then all we have to do is cat flag.txt.
