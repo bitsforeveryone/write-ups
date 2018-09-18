@@ -1,0 +1,3 @@
+This was the 3rd pwn challenge from CSAW 2018 worth 100 points. The idea here is to use shellcode to get /bin/sh
+First calculate the offset and the jump between the linked lists then write shellcode to the linked lists and overflow the 
+initials buffer in order to ret to the linked list and execute the bin/sh call.
