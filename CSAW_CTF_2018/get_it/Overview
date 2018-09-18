@@ -1,0 +1,1 @@
+This was the second basic pwn challenge, worth 50 points. It was a basic overwrite me we're even provided with a function called give_shell which we need to return to.
